@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular-21": {
+    "angular-22": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -29,9 +29,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/styles.scss"]
           },
           "configurations": {
             "production": {
@@ -61,23 +59,16 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-21:build:production"
+              "buildTarget": "angular-22:build:production"
             },
             "development": {
-              "buildTarget": "angular-21:build:development"
+              "buildTarget": "angular-22:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "test": {
-          "builder": "@angular/build:unit-test",
-          "options": {
-            "coverage": true,
-            "coverageReporters": ["html", "lcov"],
-            "coverageExclude": [
-              "**/*.html"
-            ]
-          }
+          "builder": "@angular/build:unit-test"
         }
       }
     }
